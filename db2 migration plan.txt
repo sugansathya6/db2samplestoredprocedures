@@ -1,0 +1,15 @@
+Generate DDL for the database (use db2look utility)
+
+If you have sequences (export sequence current values, use select on syscat.sequnces)
+
+On version 8.x Server export your data (use db2 export command. here I use allways IXF format)
+
+Create new database on the version 10.5 server (I will also look on new Features or Settings and try to improve the database configuration ... etc. tablespaces, bufferpool can now organize themself automatically)
+
+Copy and import your data on the new database (use db2 load command. use reorg / runstats after load to reorganize your data and update table statistics)
+
+This step is maybe optional, depends on your database model. If you have referenced keys, the you'll have to do a integrity check (SET INTEGRITY FOR <<>> IMMEDIATE CHECKED)
+
+Update sequences values
+
+I've wrote a script for all these steps. This is not quite easy, but it's also the only way when migrating to another OS.

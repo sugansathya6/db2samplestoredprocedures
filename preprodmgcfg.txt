@@ -1,0 +1,111 @@
+
+          Database Manager Configuration
+
+     Node type = Enterprise Server Edition with local and remote clients
+
+ Database manager configuration release level            = 0x0a00
+
+ CPU speed (millisec/instruction)             (CPUSPEED) = 5.963346e-07
+ Communications bandwidth (MB/sec)      (COMM_BANDWIDTH) = 1.000000e+02
+
+ Max number of concurrently active databases     (NUMDB) = 8
+ Data Links support                          (DATALINKS) = NO
+ Federated Database System Support           (FEDERATED) = YES
+ Transaction processor monitor name        (TP_MON_NAME) = 
+
+ Default charge-back account           (DFT_ACCOUNT_STR) = 
+
+ Java Development Kit installation path       (JDK_PATH) = /usr/jre/j2sdk1.4.2_12
+
+ Diagnostic error capture level              (DIAGLEVEL) = 2
+ Notify Level                              (NOTIFYLEVEL) = 3
+ Diagnostic data directory path               (DIAGPATH) = /export/home/csinst1p/sqllib/db2dump
+
+ Default database monitor switches
+   Buffer pool                         (DFT_MON_BUFPOOL) = OFF
+   Lock                                   (DFT_MON_LOCK) = OFF
+   Sort                                   (DFT_MON_SORT) = OFF
+   Statement                              (DFT_MON_STMT) = OFF
+   Table                                 (DFT_MON_TABLE) = OFF
+   Timestamp                         (DFT_MON_TIMESTAMP) = OFF
+   Unit of work                            (DFT_MON_UOW) = OFF
+ Monitor health of instance and databases   (HEALTH_MON) = OFF
+
+ SYSADM group name                        (SYSADM_GROUP) = CSIADM1P
+ SYSCTRL group name                      (SYSCTRL_GROUP) = 
+ SYSMAINT group name                    (SYSMAINT_GROUP) = 
+ SYSMON group name                        (SYSMON_GROUP) = 
+
+ Client Userid-Password Plugin          (CLNT_PW_PLUGIN) = 
+ Client Kerberos Plugin                (CLNT_KRB_PLUGIN) = 
+ Group Plugin                             (GROUP_PLUGIN) = 
+ GSS Plugin for Local Authorization    (LOCAL_GSSPLUGIN) = 
+ Server Plugin Mode                    (SRV_PLUGIN_MODE) = UNFENCED
+ Server List of GSS Plugins      (SRVCON_GSSPLUGIN_LIST) = 
+ Server Userid-Password Plugin        (SRVCON_PW_PLUGIN) = 
+ Server Connection Authentication          (SRVCON_AUTH) = NOT_SPECIFIED
+ Database manager authentication        (AUTHENTICATION) = SERVER
+ Cataloging allowed without authority   (CATALOG_NOAUTH) = NO
+ Trust all clients                      (TRUST_ALLCLNTS) = YES
+ Trusted client authentication          (TRUST_CLNTAUTH) = CLIENT
+ Bypass federated authentication            (FED_NOAUTH) = NO
+
+ Default database path                       (DFTDBPATH) = /export/home/csinst1p
+
+ Database monitor heap size (4KB)          (MON_HEAP_SZ) = 90
+ Java Virtual Machine heap size (4KB)     (JAVA_HEAP_SZ) = 2048
+ Audit buffer size (4KB)                  (AUDIT_BUF_SZ) = 0
+ Size of instance shared memory (4KB)  (INSTANCE_MEMORY) = AUTOMATIC
+ Backup buffer default size (4KB)            (BACKBUFSZ) = 1024
+ Restore buffer default size (4KB)           (RESTBUFSZ) = 1024
+
+ Sort heap threshold (4KB)                  (SHEAPTHRES) = 66000
+
+ Directory cache support                     (DIR_CACHE) = YES
+
+ Application support layer heap size (4KB)   (ASLHEAPSZ) = 30
+ Max requester I/O block size (bytes)         (RQRIOBLK) = 32767
+ Query heap size (4KB)                   (QUERY_HEAP_SZ) = 1000
+
+ Workload impact by throttled utilities(UTIL_IMPACT_LIM) = 10
+
+ Priority of agents                           (AGENTPRI) = SYSTEM
+ Max number of existing agents               (MAXAGENTS) = 400
+ Agent pool size                        (NUM_POOLAGENTS) = 200(calculated)
+ Initial number of agents in pool       (NUM_INITAGENTS) = 0
+ Max number of coordinating agents     (MAX_COORDAGENTS) = MAXAGENTS
+ Max no. of concurrent coordinating agents  (MAXCAGENTS) = MAX_COORDAGENTS
+ Max number of client connections      (MAX_CONNECTIONS) = MAX_COORDAGENTS
+
+ Keep fenced process                        (KEEPFENCED) = YES
+ Number of pooled fenced processes         (FENCED_POOL) = MAX_COORDAGENTS
+ Initial number of fenced processes     (NUM_INITFENCED) = 0
+
+ Index re-creation time and redo index build  (INDEXREC) = RESTART
+
+ Transaction manager database name         (TM_DATABASE) = 1ST_CONN
+ Transaction resync interval (sec)     (RESYNC_INTERVAL) = 180
+
+ SPM name                                     (SPM_NAME) = 
+ SPM log size                          (SPM_LOG_FILE_SZ) = 256
+ SPM resync agent limit                 (SPM_MAX_RESYNC) = 20
+ SPM log path                             (SPM_LOG_PATH) = 
+
+ TCP/IP Service name                          (SVCENAME) = db2ic_csinst1p
+ Discovery mode                               (DISCOVER) = SEARCH
+ Discover server instance                (DISCOVER_INST) = ENABLE
+
+ Maximum query degree of parallelism   (MAX_QUERYDEGREE) = 2
+ Enable intra-partition parallelism     (INTRA_PARALLEL) = NO
+
+ No. of int. communication buffers(4KB)(FCM_NUM_BUFFERS) = 4096
+ Number of FCM request blocks              (FCM_NUM_RQB) = AUTOMATIC
+ Number of FCM connection entries      (FCM_NUM_CONNECT) = AUTOMATIC
+ Number of FCM message anchors         (FCM_NUM_ANCHORS) = AUTOMATIC
+
+ Node connection elapse time (sec)         (CONN_ELAPSE) = 10
+ Max number of node connection retries (MAX_CONNRETRIES) = 5
+ Max time difference between nodes (min) (MAX_TIME_DIFF) = 60
+
+ db2start/db2stop timeout (min)        (START_STOP_TIME) = 10
+

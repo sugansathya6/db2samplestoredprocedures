@@ -1,0 +1,18 @@
+Ipclean 
+
+Ipcs | grep instancename 
+
+ ipcs | grep dsinst2
+s   13565974   0x73006b4e --ra-ra----  dsinst2  dsiadm2
+s  863567969   0x73006b52 --ra-ra----  dsinst2  dsiadm2
+
+
+ipcrm -s i<d>
+ipcrm -m i<d>
+ipcrm -q i<d>
+
+ipclean
+
+kill -9 any pid with the instance name
+
+Ipclean

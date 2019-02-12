@@ -1,0 +1,25 @@
+
+            Admin Server Configuration
+
+ Authentication Type DAS                (AUTHENTICATION) = SERVER_ENCRYPT
+
+ DAS Administration Authority Group Name  (DASADM_GROUP) = db2iadm5
+
+ DAS Discovery Mode                           (DISCOVER) = SEARCH
+ Name of the DB2 Server System               (DB2SYSTEM) = FTWPSSPS2
+
+ Java Development Kit Installation Path DAS   (JDK_PATH) = /usr/jre/j2sdk1.4.2_12
+ Java Development Kit Installation Path DAS   (JDK_64_PATH) = /usr/jre/j2sdk1.4.2_12
+
+ DAS Code Page                            (DAS_CODEPAGE) = 0
+ DAS Territory                           (DAS_TERRITORY) = 0
+
+ Location of Contact List                 (CONTACT_HOST) = 
+ Execute Expired Tasks                   (EXEC_EXP_TASK) = NO
+ Scheduler Mode                           (SCHED_ENABLE) = ON
+ SMTP Server                               (SMTP_SERVER) = xlivimc02.aig.com
+ Tools Catalog Database                    (TOOLSCAT_DB) = TOOLSDB
+ Tools Catalog Database Instance         (TOOLSCAT_INST) = csinst1q
+ Tools Catalog Database Schema         (TOOLSCAT_SCHEMA) = TOOLSCAT
+ Scheduler User ID                                       = csinst1q
+
