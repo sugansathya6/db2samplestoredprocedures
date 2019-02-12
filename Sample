@@ -1,0 +1,106 @@
+CREATE PROCEDURE SALPLANP.A_PR_COPY_FCST_BUGDGET (  )
+    result sets 1
+    LANGUAGE SQL
+------------------------------------------------------------------------
+-- SQL Stored Procedure 
+------------------------------------------------------------------------
+BEGIN
+declare vpfcount int;
+declare vadjcount int;
+declare vinccount int;
+declare vexpcount int;
+declare vmondatacount int;
+-- copy payrollinfo records
+/*   DECLARE GLOBAL TEMPORARY TABLE TG_Payroll_Info
+   like TSAL_PLAN_PAYROLL_INFO
+    NOT LOGGED WITH REPLACE;
+    insert  into SESSION.TG_Payroll_Info
+    Select *
+       from  tsal_plan_payroll_info
+       where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+       splan_mode = 'A';
+     update SESSION.TG_Payroll_Info
+     set splan_mode = 'P';
+    insert  into tsal_plan_payroll_info
+    Select *
+       from  SESSION.TG_Payroll_Info;
+    
+-- copy adj records
+   DECLARE GLOBAL TEMPORARY TABLE TG_Adjustment
+   like TEMP_ADJUSTMENT
+    NOT LOGGED WITH REPLACE;
+    insert  into SESSION.TG_Adjustment
+    Select *
+       from  temp_adjustment
+       where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+       splan_mode = 'A';
+     update SESSION.TG_Adjustment
+     set splan_mode = 'P';
+    insert  into temp_Adjustment
+    Select *
+       from  SESSION.TG_Adjustment;
+    
+ 
+-- copy exp records
+   DECLARE GLOBAL TEMPORARY TABLE TG_sal_monthly_exp
+   like TEMP_sal_monthly_exp
+    NOT LOGGED WITH REPLACE;
+    insert  into SESSION.TG_sal_monthly_exp
+    Select *
+       from  temp_sal_monthly_exp
+       where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+       splan_mode = 'A';
+     update SESSION.TG_sal_monthly_exp
+     set splan_mode = 'P';
+    insert  into temp_sal_monthly_exp
+    Select *
+       from  SESSION.TG_sal_monthly_exp;
+    
+-- copy mondata records
+   DECLARE GLOBAL TEMPORARY TABLE TG_monthly_data
+   like TEMP_monthly_data
+    NOT LOGGED WITH REPLACE;
+    insert  into SESSION.TG_monthly_data
+    Select *
+       from  temp_monthly_data
+       where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+       splan_mode = 'A';
+     update SESSION.TG_monthly_data
+     set splan_mode = 'P';
+    insert  into temp_monthly_data
+    Select *
+       from  SESSION.TG_monthly_data;
+    
+*/
+    select count(*) into vpfcount
+    from    tsal_plan_payroll_info
+     where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+    splan_mode = 'P';
+       select count(*) into vadjcount
+    from    temp_adjustment
+     where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+    splan_mode = 'P';
+       select count(*) into vexpcount
+    from    temp_sal_monthly_exp
+     where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+    splan_mode = 'P';
+       select count(*) into vmondatacount
+    from    temp_monthly_data
+     where shell_cd in ('05010500') and
+       splan_start_dt = '01-01-2003' and
+    splan_mode = 'P';
+ begin 
+   declare c1 cursor with return for
+    values vpfcount, vadjcount, vexpcount, vmondatacount
+    for read only;
+   open c1;
+ end ;
+END
+@
